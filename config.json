@@ -1,0 +1,8 @@
+{
+  "stream_id":"signal-production",
+  "deployment_id":"signal-production-v1",
+  "key_id":"key-v1",
+  "public_key_spki_sha256":"1a3690d9ea861a1224125a3106b3c830594f8abd4cdfd92192ed09e772e2e55b",
+  "tsa_root_file_sha256":"2151b61137ffa86bf664691ba67e7da0b19f98c758e3d228d5d8ebf27e044438",
+  "publication_delay_ms":604800000
+}

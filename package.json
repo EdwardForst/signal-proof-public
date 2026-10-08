@@ -1,0 +1,20 @@
+{
+  "name": "signal-proof-public",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "sync": "node scripts/sync.js",
+    "verify": "node scripts/verify.js",
+    "build": "node scripts/build.js"
+  },
+  "dependencies": {
+    "asn1js": "3.0.6",
+    "pkijs": "3.3.3"
+  },
+  "devDependencies": {
+    "esbuild": "^0.25.0"
+  },
+  "engines": {
+    "node": ">=22"
+  }
+}
