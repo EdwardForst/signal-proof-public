@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "published_seq": 0,
-  "chain_hash": "0000000000000000000000000000000000000000000000000000000000000000",
+  "published_seq": 1,
+  "chain_hash": "1852740b74988294ce5ca4cf09848185e8bfd4ae837f1ef5105c7d22d949d3aa",
   "last_checked_utc_date": "2026-11-08"
 }
