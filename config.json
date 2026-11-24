@@ -1,0 +1,8 @@
+{
+  "stream_id": "signal-proof-v1",
+  "deployment_id": "signal-proof-v1",
+  "key_id": "key-v1",
+  "public_key_spki_sha256": "54a45dc35ef573f192535fe7519f55f832fc63c06bba2fd8970a8d3d22e7acdc",
+  "tsa_root_file_sha256": "2151b61137ffa86bf664691ba67e7da0b19f98c758e3d228d5d8ebf27e044438",
+  "publication_delay_ms": 604800000
+}
