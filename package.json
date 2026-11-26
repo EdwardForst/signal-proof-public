@@ -3,7 +3,9 @@
   "private": true,
   "type": "module",
   "scripts": {
+    "test": "node --test test/*.test.js",
     "sync": "node scripts/sync.js",
+    "monitor": "node scripts/monitor.js",
     "verify": "node scripts/verify.js",
     "build": "node scripts/build.js"
   },

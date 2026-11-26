@@ -13,5 +13,10 @@ if(recordsPath==='data/records.json'){
  matchDisclosures(JSON.parse(readFileSync(recordsPath,'utf8')),commitments);
  const manifest=JSON.parse(readFileSync('data/manifest.json','utf8'));
  assert.equal(result.verified_records,manifest.published_seq);assert.equal(result.chain_hash,manifest.chain_hash);
+ if(manifest.last_successful_sync_at!==undefined){
+  const syncedAt=new Date(manifest.last_successful_sync_at);
+  assert.equal(syncedAt.toISOString(),manifest.last_successful_sync_at);
+  assert.equal(manifest.last_checked_utc_date,syncedAt.toISOString().slice(0,10));
+ }
 }
 console.log(JSON.stringify(result,null,2));

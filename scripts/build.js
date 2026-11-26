@@ -1,5 +1,6 @@
 import {rmSync,mkdirSync,copyFileSync,writeFileSync,readFileSync} from 'node:fs';
 import {build} from 'esbuild';
+import {ZERO} from '../lib/archive.js';
 rmSync('dist',{recursive:true,force:true});
 // Publish only the listed verification files.
 mkdirSync('dist/trust',{recursive:true});mkdirSync('dist/data/records',{recursive:true});
@@ -14,3 +15,12 @@ for(const receipt of records){
 }
 console.log('Built public site with '+records.length+' released records.');
 copyFileSync('data/commitments.json','dist/data/commitments.json');
+const commitments=JSON.parse(readFileSync('data/commitments.json','utf8'));
+const manifest=JSON.parse(readFileSync('data/manifest.json','utf8'));
+const status={
+ schema_version:1,
+ last_successful_sync_at:manifest.last_successful_sync_at??null,
+ commitments:{seq:commitments.length,chain_hash:commitments.at(-1)?.chain_hash??ZERO},
+ disclosures:{seq:manifest.published_seq,chain_hash:manifest.chain_hash},
+};
+writeFileSync('dist/data/status.json',JSON.stringify(status,null,2)+'\n');
